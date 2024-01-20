@@ -86,7 +86,7 @@ Please browse the endpoint - "http://demo-infra-alb-2082237740.eu-central-1.elb.
 5. Cleanup 
 You can cleanup all the resources using `end_of_show.sh` script. Execute as below
 ```bash
-bash-5.1$ ./end_of_show.sh
+bash-5.1$ ./infra-as-code/wrapper/end_of_show.sh
 This script is to destroy the resources created by wrapper
 Switch to Terraform directory
 Switching to terraform directory
