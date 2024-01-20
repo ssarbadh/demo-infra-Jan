@@ -14,7 +14,8 @@ azs:
   - eu-central-1b
   - eu-central-1c
 
-ami-id: "ami-0292a7daeeda6b851" #Amazon Linux in Frankfurt eu-central-1
+# Fetched from datasource ami
+# ami-id: "ami-0292a7daeeda6b851" #Amazon Linux in Frankfurt eu-central-1
 
 instance-type: "t3.micro"   #Free Tier
 

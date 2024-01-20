@@ -43,29 +43,53 @@ The repository is structured the following way -
 | infra-as-code     | Script and code for infrastructure as code and startup scripts in wrapper folder |
 | terraform-module     | Terraform module to create the infrastructure to use |
 
+## Configure the infra to Run
+There is a yaml file to configure basic aspects of the infras to run. This can be updated to use other custom variables as well (later scope). 
+```bash
+bash-5.1$ cat infra-as-code/configuration/demo-infra.yaml
+vpc_cidr: "10.0.0.0/16"
+public_subnet_cidrs:
+   - "10.0.1.0/24"
+   - "10.0.2.0/24"
+   - "10.0.3.0/24"
+.
+.
+.
+```
 
 ## Run the Project
-1. Clone the repo into any server or laptop with terraform installed `terraform version 1.3.6`. 
-2. Run the shell script `wrapper.sh` 
+1. Clone the repo into any server or laptop with terraform installed `terraform version 1.0.0+`. 
+2. Run the shell script `setup.sh` 
 ```bash
-./infra-as-code/wrapper/wrapper.sh
+./setup.sh
+bash-5.1$ ./setup.sh
+Please run the script as ./setup.sh -h to view available options
+bash-5.1$ ./setup.sh -h
+Add description of the script functions here.
 
-Check Terraform existance
-Terraform v1.3.6
-on darwin_amd64
+Syntax: scriptTemplate [-h|c|d|V]
+options:
+h     Print this Help.
+c     Create Infra
+d     Destroy Infra
+V     Print software version and exit.
 
-Your version of Terraform is out of date! The latest version
-is 1.7.0. You can update by downloading from https://www.terraform.io/downloads.html
-./wrapper.sh: line 12: 0: command not found
+bash-5.1$ ./setup.sh -V
+
+1.0.0
+
+bash-5.1$ ./setup.sh -c
+
+Creating infra
+
 Please enter AWS Credentials for an IAM User with R/W access to VPC, EC2
-Enter ACCESS_KEY_ID: xxxxxxxxxxxxxxx
-Access Key is xxxxxxxxxxxxxx
-Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is xxxxxxx
+Enter ACCESS_KEY_ID: AKIA2UC3BAK43C7BEH56
+Access Key is AKIA2UC3BAK43C7BEH56
+Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is tDMfZC2Rg9zwPplEwUcQg/+hVCbAVYCOrT44ehnA
 Enter AWS_DEFAULT_REGION: eu-central-1
 Default Region is eu-central-1
-Switching to terraform directory
-Running Terraform init
-Initializing modules...
+Check Terraform existance
+“Terraform is installed, proceeding .....”
 .
 .
 .
@@ -84,14 +108,22 @@ Please browse the endpoint - "http://demo-infra-alb-2082237740.eu-central-1.elb.
 ```
 
 5. Cleanup 
-You can cleanup all the resources using `end_of_show.sh` script. Execute as below
+You can cleanup all the resources using `setup.sh` script with `-d`. Execute as below
 ```bash
-bash-5.1$ ./infra-as-code/wrapper/end_of_show.sh
+bash-5.1$ ./setup.sh -d
+
+Destroying infra
+
+Please enter AWS Credentials for an IAM User with R/W access to VPC, EC2
+Enter ACCESS_KEY_ID: AKIA2UC3BAK43C7BEH56
+Access Key is AKIA2UC3BAK43C7BEH56
+Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is tDMfZC2Rg9zwPplEwUcQg/+hVCbAVYCOrT44ehnA
+Enter AWS_DEFAULT_REGION: eu-central-1
+Default Region is eu-central-1
+Check Terraform existance
+“Terraform is installed, proceeding .....”
+AKIA2UC3BAK43C7BEH56
 This script is to destroy the resources created by wrapper
-Switch to Terraform directory
-Switching to terraform directory
-Running Terraform init
-Initializing modules...
 .
 .
 .
