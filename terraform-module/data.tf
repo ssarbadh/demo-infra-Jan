@@ -19,3 +19,7 @@ data "aws_ami" "latest" {
   }
 
 }
+
+data "aws_availability_zones" "available" {
+  state = "available"
+}
