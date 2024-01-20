@@ -9,11 +9,13 @@ private_subnet_cidrs:
    - "10.0.5.0/24"
    - "10.0.6.0/24"
 
-azs: 
-  - eu-central-1a 
-  - eu-central-1b
-  - eu-central-1c
+# azs: 
+#   - eu-central-1a 
+#   - eu-central-1b
+#   - eu-central-1c
 
+region: eu-central-1
+  
 # Fetched from datasource ami
 # ami-id: "ami-0292a7daeeda6b851" #Amazon Linux in Frankfurt eu-central-1
 

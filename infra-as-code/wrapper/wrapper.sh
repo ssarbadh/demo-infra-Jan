@@ -76,7 +76,7 @@ terraform apply --auto-approve
 
 #Terraform Output 
 endpoint=$(terraform output Endpoint)
-
+endpoint=$(echo $endpoint|sed 's/"//g')
 echo "Please browse the endpoint ---    http://$endpoint  "
 
 

@@ -15,7 +15,6 @@ terraform {
       source = "hashicorp/aws"
       #   version = "4.49.0"
       version = ">= 5.30.0"
-
     }
     # template = {
     #   source = "hashicorp/template"
@@ -24,3 +23,8 @@ terraform {
 #   required_version = ">= 1.3.6"
   required_version = ">= 1.0.0"
 }
+
+provider "aws" {
+  region = var.region
+}
+
