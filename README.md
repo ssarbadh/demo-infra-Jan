@@ -83,9 +83,9 @@ bash-5.1$ ./setup.sh -c
 Creating infra
 
 Please enter AWS Credentials for an IAM User with R/W access to VPC, EC2
-Enter ACCESS_KEY_ID: AKIA2UC3BAK43C7BEH56
-Access Key is AKIA2UC3BAK43C7BEH56
-Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is tDMfZC2Rg9zwPplEwUcQg/+hVCbAVYCOrT44ehnA
+Enter ACCESS_KEY_ID: xxxxxxxx
+Access Key is xxxxxx
+Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is xxxxxxxx
 Enter AWS_DEFAULT_REGION: eu-central-1
 Default Region is eu-central-1
 Check Terraform existance
@@ -115,9 +115,9 @@ bash-5.1$ ./setup.sh -d
 Destroying infra
 
 Please enter AWS Credentials for an IAM User with R/W access to VPC, EC2
-Enter ACCESS_KEY_ID: AKIA2UC3BAK43C7BEH56
-Access Key is AKIA2UC3BAK43C7BEH56
-Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is tDMfZC2Rg9zwPplEwUcQg/+hVCbAVYCOrT44ehnA
+Enter ACCESS_KEY_ID: xxxxxxxx
+Access Key is xxxxxxxx
+Enter AWS_SECRET_ACCESS_KEY: Your secret access key is is xxxxxxxxxxx
 Enter AWS_DEFAULT_REGION: eu-central-1
 Default Region is eu-central-1
 Check Terraform existance
