@@ -9,7 +9,7 @@ resource "aws_lb" "demo_infra_alb" {
 
 
   tags = {
-    Name = "demo-infra-alb" 
+    Name        = "demo-infra-alb"
     Environment = "demo"
   }
 }

@@ -41,11 +41,11 @@ resource "aws_security_group" "instance-sg" {
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_http_ipv4_instance" {
-  security_group_id = aws_security_group.instance-sg.id
+  security_group_id            = aws_security_group.instance-sg.id
   referenced_security_group_id = aws_security_group.alb-sg.id
-  from_port         = 80
-  ip_protocol       = "tcp"
-  to_port           = 80
+  from_port                    = 80
+  ip_protocol                  = "tcp"
+  to_port                      = 80
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_ssh_ipv4_instance" {

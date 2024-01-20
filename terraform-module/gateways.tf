@@ -1,13 +1,13 @@
 resource "aws_internet_gateway" "gw" {
- vpc_id = aws_vpc.main.id
- 
- tags = {
-   Name = "Project VPC IG"
- }
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "Project VPC IG"
+  }
 }
 
 resource "aws_eip" "natgw" {
-#   domain   = "vpc"
+  #   domain   = "vpc"
 }
 
 resource "aws_nat_gateway" "natgw" {
