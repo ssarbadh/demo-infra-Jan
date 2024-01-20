@@ -1,0 +1,9 @@
+# Log file
+*.log
+
+*.pem
+.terraform/
+**/.terraform
+*.tfstate*backup
+*.tfstate*
+.terraform.lock.hcl

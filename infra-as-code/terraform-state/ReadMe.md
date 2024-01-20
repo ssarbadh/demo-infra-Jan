@@ -1,0 +1,1 @@
+Folder to store local terraform state
