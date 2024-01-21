@@ -130,3 +130,5 @@ This script is to destroy the resources created by wrapper
 .
 
 ```
+## Output
+![](https://github.com/ssarbadh/demo-infra-Jan/blob/main/ReadMe-files/screeenrecord.gif)
