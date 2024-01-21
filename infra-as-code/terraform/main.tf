@@ -18,6 +18,7 @@ module "demo-infra" {
   public_subnet_cidrs  = local.demo-infra.public_subnet_cidrs
   private_subnet_cidrs = local.demo-infra.private_subnet_cidrs
 #   azs                  = local.demo-infra.azs
+  
   region               = local.demo-infra.region
 
 #   ami-id        = local.demo-infra.ami-id
