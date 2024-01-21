@@ -44,9 +44,9 @@ The repository is structured the following way -
 | terraform-module     | Terraform module to create the infrastructure to use |
 
 ## Configure the infra to Run
-There is a yaml file to configure basic aspects of the infras to run. This can be updated to use other custom variables as well (later scope). 
-```bash
-bash-5.1$ cat infra-as-code/configuration/demo-infra.yaml
+There is a yaml file to configure basic aspects of the infras to run. This can be updated to use other custom variables as well (later scope).
+https://github.com/ssarbadh/demo-infra-Jan/blob/main/infra-as-code/configuration/demo-infra.yaml
+```yaml
 vpc_cidr: "10.0.0.0/16"
 public_subnet_cidrs:
    - "10.0.1.0/24"
@@ -56,10 +56,33 @@ public_subnet_cidrs:
 .
 .
 ```
+## Prerequisite
+Tools required to get started 
+- Terraform `1.0.0+`
+- git
+
 
 ## Run the Project
-1. Clone the repo into any server or laptop with terraform installed `terraform version 1.0.0+`. 
-2. Run the shell script `setup.sh` 
+1. Clone the repo into any server or laptop with terraform installed `terraform version 1.0.0+`.
+```
+git clone git@github.com:ssarbadh/demo-infra-Jan.git
+``` 
+2. Switch to the cloned repo root
+```
+cd demo-infra-Jan
+```
+3. Make the shell script executable (sudo might be required)
+```
+chmod +x setup.sh
+```
+4. Run the shell script `setup.sh`
+```
+./setup.sh -h
+```
+
+&emsp;Follow the option you wish to use.( For e.g. to create resources run - `./setup.sh -c` )
+
+&emsp;Example flow of events -
 ```bash
 ./setup.sh
 bash-5.1$ ./setup.sh
@@ -96,7 +119,7 @@ Check Terraform existance
 .
 
 ```
-4. Access the URL presented as the script completes
+5. Once the script execution is successfully completed, you should see an Access URL presented. Access the URL to access the web page. 
 ```bash
 Apply complete! Resources: 31 added, 0 changed, 0 destroyed.
 
@@ -106,9 +129,14 @@ Endpoint = "demo-infra-alb-2082237740.eu-central-1.elb.amazonaws.com"
 Please browse the endpoint - "http://demo-infra-alb-2082237740.eu-central-1.elb.amazonaws.com"
 
 ```
+![](https://github.com/ssarbadh/demo-infra-Jan/blob/main/ReadMe-files/screeenrecord.gif)
 
-5. Cleanup 
+6. Cleanup 
 You can cleanup all the resources using `setup.sh` script with `-d`. Execute as below
+```
+./setup.sh -d
+```
+&emsp;Example flow -
 ```bash
 bash-5.1$ ./setup.sh -d
 
