@@ -17,11 +17,11 @@ module "demo-infra" {
   vpc_cidr             = local.demo-infra.vpc_cidr
   public_subnet_cidrs  = local.demo-infra.public_subnet_cidrs
   private_subnet_cidrs = local.demo-infra.private_subnet_cidrs
-#   azs                  = local.demo-infra.azs
-  
-  region               = local.demo-infra.region
+  #   azs                  = local.demo-infra.azs
 
-#   ami-id        = local.demo-infra.ami-id
+  region = local.demo-infra.region
+
+  #   ami-id        = local.demo-infra.ami-id
   instance-type = local.demo-infra.instance-type
 
   desired-node = local.demo-infra.desired-node
