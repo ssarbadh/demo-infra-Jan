@@ -60,6 +60,7 @@ public_subnet_cidrs:
 Tools required to get started 
 - Terraform `1.0.0+`
 - git
+- AWS account IAM User with Access Key and Secret Key (CLI Access) and Admin access to ec2 & VPC
 
 
 ## Run the Project
